@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MStopWatch.MyPageV">
+  <StackLayout>
+    <Label>M StopWatch View</Label>
+    <Button Clicked="clickStart" Text="{Binding StartButtonText}" />
+    <Button Clicked="clickLap"   Text="Lap" />
+    <Label Text="{Binding NowSpan, StringFormat='{0}'}" />
+    <ListView ItemsSource="{Binding Items}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding Span, StringFormat='{0}'}" Detail="{Binding Time}" />
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
