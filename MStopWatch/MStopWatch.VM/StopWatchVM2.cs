@@ -11,10 +11,12 @@ namespace MStopWatch.VM2
 {
     public class LapTime
     {
+        public int Num { get; set; }
         public TimeSpan Span { get; set; }
         public DateTime Time { get; set; }
-        public LapTime( DateTime time, TimeSpan span )
+        public LapTime(int num, DateTime time, TimeSpan span)
         {
+            this.Num = num;
             this.Time = time;
             this.Span = span;
         }
@@ -48,7 +50,7 @@ namespace MStopWatch.VM2
         public void Stop()
         {
             Now = DateTime.Now;
-            Items.Add(new LapTime(Now, Now - StartTime));
+            Items.Add(new LapTime(this.Items.Count + 1, Now, Now - StartTime));
             _loop = false;
         }
         public void Reset()
@@ -59,7 +61,7 @@ namespace MStopWatch.VM2
         public void Lap()
         {
             Now = DateTime.Now;
-            this.Items.Add(new LapTime(Now, Now - StartTime));
+            this.Items.Add(new LapTime(this.Items.Count+1, Now, Now - StartTime));
         }
 
     }

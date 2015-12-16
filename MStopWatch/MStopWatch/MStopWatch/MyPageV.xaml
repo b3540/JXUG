@@ -4,11 +4,11 @@
     <Label>M StopWatch View</Label>
     <Button Clicked="clickStart" Text="{Binding StartButtonText}" />
     <Button Clicked="clickLap"   Text="Lap" />
-    <Label Text="{Binding NowSpan, StringFormat='{0}'}" />
+    <Label Text="{Binding NowSpan, StringFormat='{0:mm\\:ss\\.fff}'}" />
     <ListView ItemsSource="{Binding Items}">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <TextCell Text="{Binding Span, StringFormat='{0}'}" Detail="{Binding Time}" />
+          <TextCell Text="{Binding Num, StringFormat='{0}'}" Detail="{Binding Time, StringFormat='{0:mm\\:ss\\.fff}'}" />
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

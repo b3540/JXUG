@@ -19,12 +19,13 @@
             Grid.Column="1" Margin="10">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Time}" Header="Time" Width="150"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Span}" Header="Span" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Num}" Header="No." Width="50"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Time, StringFormat='hh:mm:ss'}" Header="Time" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Span, StringFormat='mm\\:ss\\.fff'}"  Header="Span" Width="150"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBlock HorizontalAlignment="Left" Margin="10,112,0,0" TextWrapping="Wrap" Text="{Binding NowSpan}" VerticalAlignment="Top" Width="80"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,112,0,0" TextWrapping="Wrap" Text="{Binding NowSpan, StringFormat='mm\\:ss\\.fff'}" VerticalAlignment="Top" Width="80"/>
 
     </Grid>
 </Window>
