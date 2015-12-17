@@ -31,38 +31,4 @@ namespace MStopWatch
             set { SetValue(ModeProperty, value); }
         }
     }
-#if false
-    class CustomButton : Button
-    {
-        /// <summary>
-        /// モードを指定
-        /// </summary>
-        /// 
-        public static readonly BindableProperty ModeProperty =
-            BindableProperty.Create<CustomButton, int>(
-                p =>
-                    p.Mode,
-                    0,
-                    propertyChanged: (bindable, oldValue, newValue) =>
-                    {
-                        var uc = bindable as CustomButton;
-                        /*
-                        switch ((int)newValue)
-                        {
-                            case 0: uc.Text = "開始"; break;
-                            case 1: uc.Text = "停止"; break;
-                            case 2: uc.Text = "リセット"; break;
-                        }
-                        */
-                    ((CustomButton)bindable).Mode = newValue;
-                    });
-
-        // 依存プロパティのラッパー
-        public int Mode
-        {
-            get { return (int)GetValue(ModeProperty); }
-            set { SetValue(ModeProperty, value); }
-        }
-    }
-#endif
 }
