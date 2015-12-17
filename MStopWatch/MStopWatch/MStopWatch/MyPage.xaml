@@ -1,8 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MStopWatch.MyPage">
+<ContentPage 
+  xmlns="http://xamarin.com/schemas/2014/forms" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+  xmlns:local="clr-namespace:MStopWatch;assembly=MStopWatch"
+  x:Class="MStopWatch.MyPage">
   <StackLayout>
     <Label>M StopWatch</Label>
-    <Button Clicked="clickStart" Text="{Binding StartButtonText}" />
+    <Button Clicked="clickStart" Text="{Binding StartButtonText}" /> 
+    <local:CustomButton Clicked="clickStart" Text="Custom" Mode="{Binding Mode}" /> 
     <Button Clicked="clickLap"   Text="Lap" />
     <Label Text="{Binding NowSpan, StringFormat='{0:mm\\:ss\\.fff}'}" />
     <ListView ItemsSource="{Binding Items}">

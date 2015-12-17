@@ -12,8 +12,15 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Button 
-            Click="clickStart" Content="{Binding StartButtonText}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="39" Margin="10,10,0,0"/>
+            Click="clickStart" 
+            Content="{Binding StartButtonText}" 
+            HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="39" Margin="10,10,0,0"/>
         <Button Click="clickLap" Content="Lap" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="39" Margin="10,54,0,0"/>
+        <local:CustomButton
+            Click="clickStart" 
+            Content="Custom"
+            Mode="{Binding Mode}"
+            HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="39" Margin="10,128,0,0"/>
         <ListView 
             ItemsSource="{Binding Items}"
             Grid.Column="1" Margin="10">

@@ -55,6 +55,7 @@ namespace MStopWatch.VM
                 {
                     _mode = value;
                     this.OnPropertyChanged("StartButtonText");
+                    this.OnPropertyChanged("Mode");
                 }
             }
         }

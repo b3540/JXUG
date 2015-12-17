@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MStopWatch.VM2;
+using MStopWatch.VM;
 
 namespace MStopWatch.WPF
 {
@@ -38,7 +38,6 @@ namespace MStopWatch.WPF
         private void clickStart(object sender, RoutedEventArgs e)
         {
             _vm.ClickStart();
-
         }
 
         private void clickLap(object sender, RoutedEventArgs e)
