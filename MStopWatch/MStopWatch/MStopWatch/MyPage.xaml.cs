@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using MStopWatch.VM;    // ViewModel にタイマーがあるパターン
 //using MStopWatch.VM2;   // Model にタイマーがあるパターン
-//using MStopWatch.VMF;    // ViewModel を F# で書いたパターン
+//using MStopWatch.VMF;    // ViewModel を F# で書いたパターン　利用時には MStopWatchFsharp.VM.dll を参照設定する
 
 namespace MStopWatch
 {
